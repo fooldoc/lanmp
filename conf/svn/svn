@@ -1,0 +1,30 @@
+#!/bin/bash  
+# chkconfig: - 85 15  
+# description: svn server  
+SVN_HOME=/work/svndata/  
+if [ ! -f "/usr/local/subversion/bin/svn" ]  
+then  
+echo "svnserver startup: cannot start"  
+exit  
+fi  
+case "$1" in  
+start)  
+echo "Starting svnserve..."  
+su - root -c "svnserve -d --listen-port 3690 -r $SVN_HOME"
+echo "Finished!"  
+;;  
+stop)  
+echo "Stoping svnserve..."  
+killall svnserve  
+echo "Finished!"  
+;;  
+restart)  
+$0 stop  
+$0 start  
+      
+     
+;;  
+*)  
+echo "Usage:svn { start | stop restart } "  
+exit 1  
+esac  

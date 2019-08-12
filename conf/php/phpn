@@ -1,0 +1,2 @@
+#!/bin/bash
+/usr/local/php/bin/php -c /usr/local/php/etc/php.no_disable.ini $@

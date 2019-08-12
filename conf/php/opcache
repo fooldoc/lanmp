@@ -1,0 +1,14 @@
+;开关打开
+opcache.enable=1
+; 可用内存, 酌情而定, 单位 megabytes
+opcache.memory_consumption=128
+;最大缓存的文件数目, 命中率不到 100% 的话, 可以试着提高这个值
+opcache.max_accelerated_files=5000
+;Opcache 会在一定时间内去检查文件的修改时间, 这里设置检查的时间周期, 默认为 2, 单位为秒
+opcache.revalidate_freq=240
+;interned string 的内存大小, 也可调
+opcache.interned_strings_buffer=8   
+;是否快速关闭, 打开后在PHP Request Shutdown的时候回收内存的速度会提高
+opcache.fast_shutdown=1
+;不保存文件/函数的注释
+opcache.save_comments=0
