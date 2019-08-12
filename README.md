@@ -25,6 +25,10 @@
 
 安装说明
 ========
+运行脚本前请先到百度网盘下载安装包地址：
+https://pan.baidu.com/s/1L95Q-KOl_i0xy6e39QnKHw
+下载完解压到package目录下然后在执行该脚本
+
 使用root账户，将start.sh 赋予可执行命令. chomod +x start.sh 。
 
 直接运行安装包下面的　bash start.sh 脚本. 
